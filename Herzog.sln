@@ -1,0 +1,89 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herzog.Web", "Herzog\Herzog.Web.csproj", "{74F1231F-D463-4067-8999-D4A085680727}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herzog.Business", "Herzog.Bll\Herzog.Business.csproj", "{D373FCFC-8AA8-4A49-AA41-B2A2ABA61C5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herzog.DBFactory", "Herzog.DatabaseFactory\Herzog.DBFactory.csproj", "{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herzog.Model", "Herzog.Model\Herzog.Model.csproj", "{B8E1C4C3-588D-447F-A481-69AA7CFFFE39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Herzog.DataAccess", "Herzog.DataAccess", "{F3127125-D1B2-437B-9B8E-CA85F16581D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herzog.SqlServerDB", "Herzog.SqlServerDB\Herzog.SqlServerDB.csproj", "{5F6BCB3D-E1A1-41A1-AF8F-2E7A6636EAE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herzog.IDatabase", "Herzog.IDatabase\Herzog.IDatabase.csproj", "{20E38E5F-D0C3-4CCA-A555-13DF9AF5B173}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herzog.Database", "Herzog.Database\Herzog.Database.csproj", "{708DA087-6D71-48C1-A99A-3C169D3B7F87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Herzog.Dapper", "Herzog.Dapper", "{90ED64F9-9D8F-4715-BA25-FD777C7E21C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herzog.Dapper.Contrib", "Herzog.Dapper.Contrib\Herzog.Dapper.Contrib.csproj", "{5CBB4394-DD4D-4AA5-8181-FAEBB0E779EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herzog.Dapper", "Herzog.Dapper\Herzog.Dapper.csproj", "{0F7BC344-27CE-41D0-A862-44F4F3249B59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herzog.TestConsole", "Herzog.TestConsole\Herzog.TestConsole.csproj", "{7C66F469-FF66-405C-B6FA-622AC223DDA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74F1231F-D463-4067-8999-D4A085680727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74F1231F-D463-4067-8999-D4A085680727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74F1231F-D463-4067-8999-D4A085680727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74F1231F-D463-4067-8999-D4A085680727}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D373FCFC-8AA8-4A49-AA41-B2A2ABA61C5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D373FCFC-8AA8-4A49-AA41-B2A2ABA61C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D373FCFC-8AA8-4A49-AA41-B2A2ABA61C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D373FCFC-8AA8-4A49-AA41-B2A2ABA61C5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8E1C4C3-588D-447F-A481-69AA7CFFFE39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8E1C4C3-588D-447F-A481-69AA7CFFFE39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8E1C4C3-588D-447F-A481-69AA7CFFFE39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8E1C4C3-588D-447F-A481-69AA7CFFFE39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F6BCB3D-E1A1-41A1-AF8F-2E7A6636EAE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F6BCB3D-E1A1-41A1-AF8F-2E7A6636EAE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F6BCB3D-E1A1-41A1-AF8F-2E7A6636EAE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F6BCB3D-E1A1-41A1-AF8F-2E7A6636EAE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20E38E5F-D0C3-4CCA-A555-13DF9AF5B173}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20E38E5F-D0C3-4CCA-A555-13DF9AF5B173}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20E38E5F-D0C3-4CCA-A555-13DF9AF5B173}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20E38E5F-D0C3-4CCA-A555-13DF9AF5B173}.Release|Any CPU.Build.0 = Release|Any CPU
+		{708DA087-6D71-48C1-A99A-3C169D3B7F87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{708DA087-6D71-48C1-A99A-3C169D3B7F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{708DA087-6D71-48C1-A99A-3C169D3B7F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{708DA087-6D71-48C1-A99A-3C169D3B7F87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CBB4394-DD4D-4AA5-8181-FAEBB0E779EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CBB4394-DD4D-4AA5-8181-FAEBB0E779EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CBB4394-DD4D-4AA5-8181-FAEBB0E779EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CBB4394-DD4D-4AA5-8181-FAEBB0E779EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F7BC344-27CE-41D0-A862-44F4F3249B59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F7BC344-27CE-41D0-A862-44F4F3249B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F7BC344-27CE-41D0-A862-44F4F3249B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F7BC344-27CE-41D0-A862-44F4F3249B59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C66F469-FF66-405C-B6FA-622AC223DDA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C66F469-FF66-405C-B6FA-622AC223DDA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C66F469-FF66-405C-B6FA-622AC223DDA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C66F469-FF66-405C-B6FA-622AC223DDA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154} = {F3127125-D1B2-437B-9B8E-CA85F16581D0}
+		{B8E1C4C3-588D-447F-A481-69AA7CFFFE39} = {F3127125-D1B2-437B-9B8E-CA85F16581D0}
+		{5F6BCB3D-E1A1-41A1-AF8F-2E7A6636EAE6} = {F3127125-D1B2-437B-9B8E-CA85F16581D0}
+		{20E38E5F-D0C3-4CCA-A555-13DF9AF5B173} = {F3127125-D1B2-437B-9B8E-CA85F16581D0}
+		{708DA087-6D71-48C1-A99A-3C169D3B7F87} = {F3127125-D1B2-437B-9B8E-CA85F16581D0}
+		{5CBB4394-DD4D-4AA5-8181-FAEBB0E779EB} = {90ED64F9-9D8F-4715-BA25-FD777C7E21C6}
+		{0F7BC344-27CE-41D0-A862-44F4F3249B59} = {90ED64F9-9D8F-4715-BA25-FD777C7E21C6}
+	EndGlobalSection
+EndGlobal

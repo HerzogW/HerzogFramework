@@ -1,0 +1,13 @@
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Database\obj\Debug\Herzog.Database.csprojResolveAssemblyReference.cache
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Database\bin\Debug\Herzog.Database.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Database\bin\Debug\Herzog.Database.pdb
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Database\bin\Debug\Dapper.Contrib.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Database\bin\Debug\Dapper.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Database\bin\Debug\SQLinq.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Database\bin\Debug\Dapper.xml
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Database\obj\Debug\Herzog.Database.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Database\obj\Debug\Herzog.Database.pdb
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Database\bin\Debug\Herzog.Dapper.Contrib.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Database\bin\Debug\Herzog.Dapper.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Database\bin\Debug\Herzog.Dapper.Contrib.pdb
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Database\bin\Debug\Herzog.Dapper.pdb

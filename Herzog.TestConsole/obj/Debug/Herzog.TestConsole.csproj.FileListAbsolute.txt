@@ -1,0 +1,14 @@
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.TestConsole\bin\Debug\Herzog.TestConsole.exe.config
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.TestConsole\bin\Debug\Herzog.TestConsole.exe
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.TestConsole\bin\Debug\Herzog.TestConsole.pdb
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.TestConsole\bin\Debug\Herzog.Database.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.TestConsole\bin\Debug\Herzog.Model.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.TestConsole\bin\Debug\Herzog.Dapper.Contrib.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.TestConsole\bin\Debug\Herzog.Dapper.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.TestConsole\bin\Debug\Herzog.Database.pdb
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.TestConsole\bin\Debug\Herzog.Model.pdb
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.TestConsole\bin\Debug\Herzog.Dapper.Contrib.pdb
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.TestConsole\bin\Debug\Herzog.Dapper.pdb
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.TestConsole\obj\Debug\Herzog.TestConsole.csprojResolveAssemblyReference.cache
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.TestConsole\obj\Debug\Herzog.TestConsole.exe
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.TestConsole\obj\Debug\Herzog.TestConsole.pdb

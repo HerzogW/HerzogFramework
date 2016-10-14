@@ -1,0 +1,7 @@
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Dapper.Contrib\obj\Debug\Herzog.Dapper.Contrib.csprojResolveAssemblyReference.cache
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Dapper.Contrib\bin\Debug\Herzog.Dapper.Contrib.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Dapper.Contrib\bin\Debug\Herzog.Dapper.Contrib.pdb
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Dapper.Contrib\bin\Debug\Herzog.Dapper.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Dapper.Contrib\bin\Debug\Herzog.Dapper.pdb
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Dapper.Contrib\obj\Debug\Herzog.Dapper.Contrib.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Dapper.Contrib\obj\Debug\Herzog.Dapper.Contrib.pdb

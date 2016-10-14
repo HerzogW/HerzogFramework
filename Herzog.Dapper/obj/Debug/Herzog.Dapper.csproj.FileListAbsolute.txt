@@ -1,0 +1,4 @@
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Dapper\bin\Debug\Herzog.Dapper.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Dapper\bin\Debug\Herzog.Dapper.pdb
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Dapper\obj\Debug\Herzog.Dapper.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Dapper\obj\Debug\Herzog.Dapper.pdb

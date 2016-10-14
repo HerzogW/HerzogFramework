@@ -1,0 +1,5 @@
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.DatabaseFactory\bin\Debug\Herzog.DatabaseFactory.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.DatabaseFactory\bin\Debug\Herzog.DatabaseFactory.pdb
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.DatabaseFactory\obj\Debug\Herzog.DatabaseFactory.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.DatabaseFactory\obj\Debug\Herzog.DatabaseFactory.pdb
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.DatabaseFactory\obj\Debug\Herzog.DatabaseFactory.csprojResolveAssemblyReference.cache

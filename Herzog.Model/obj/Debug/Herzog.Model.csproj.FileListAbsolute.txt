@@ -1,0 +1,4 @@
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Model\bin\Debug\Herzog.Model.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Model\bin\Debug\Herzog.Model.pdb
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Model\obj\Debug\Herzog.Model.dll
+E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Model\obj\Debug\Herzog.Model.pdb
