@@ -4,3 +4,9 @@ E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.SqlServerDB\bin\Debug\Dapper
 E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.SqlServerDB\bin\Debug\Dapper.xml
 E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.SqlServerDB\obj\Debug\Herzog.SqlServerDB.dll
 E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.SqlServerDB\obj\Debug\Herzog.SqlServerDB.pdb
+D:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\bin\Debug\Herzog.SqlServerDB.dll
+D:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\bin\Debug\Herzog.SqlServerDB.pdb
+D:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\bin\Debug\Dapper.dll
+D:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\bin\Debug\Dapper.xml
+D:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\obj\Debug\Herzog.SqlServerDB.dll
+D:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\obj\Debug\Herzog.SqlServerDB.pdb

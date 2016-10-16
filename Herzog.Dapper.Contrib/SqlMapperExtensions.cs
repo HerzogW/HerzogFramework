@@ -160,12 +160,14 @@ namespace Herzog.Dapper.Contrib.Extensions
             var type = typeof(T);
 
             string sql;
+            string queryColumnPropertyMapString = GetQueryColumnPropertyMapString(type);
             if (!GetQueries.TryGetValue(type.TypeHandle, out sql))
             {
                 var key = GetSingleKey<T>(nameof(Get));
                 var name = GetTableName(type);
 
-                sql = $"select * from {name} where {key.Name} = @id";
+                //sql = $"select * from {name} where {key.Name} = @id";
+                sql = string.Format($"select {0} from {1} where {2} = @id", queryColumnPropertyMapString, name, key.Name);
                 GetQueries[type.TypeHandle] = sql;
             }
 
@@ -215,12 +217,13 @@ namespace Herzog.Dapper.Contrib.Extensions
             var cacheType = typeof(List<T>);
 
             string sql;
+            string queryColumePropertyMapString = GetQueryColumnPropertyMapString(type);
             if (!GetQueries.TryGetValue(cacheType.TypeHandle, out sql))
             {
                 GetSingleKey<T>(nameof(GetAll));
                 var name = GetTableName(type);
 
-                sql = "select * from " + name;
+                sql = string.Format("select {0} from {1}", queryColumePropertyMapString, name);
                 GetQueries[cacheType.TypeHandle] = sql;
             }
 
@@ -241,6 +244,28 @@ namespace Herzog.Dapper.Contrib.Extensions
             }
             return list;
         }
+
+        private static string GetQueryColumnPropertyMapString(Type type)
+        {
+            var allProperties = TypePropertiesCache(type);
+
+            StringBuilder sb = new StringBuilder();
+            for (var i = 0; i < allProperties.Count; i++)
+            {
+                var property = allProperties.ElementAt(i);
+                sb.AppendQueryColumn(property.GetColumnName(), property.Name);
+                if (i < allProperties.Count - 1)
+                    sb.AppendFormat(", ");
+            }
+
+            return sb.ToString();
+        }
+
+        private static void AppendQueryColumn(this StringBuilder sb, string columnName, string propertyName)
+        {
+            sb.AppendFormat("{0} as {1}", columnName, propertyName);
+        }
+
 
         /// <summary>
         /// Specify a custom table name mapper based on the POCO type name

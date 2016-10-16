@@ -1,0 +1,4 @@
+D:\HerzogFramework\HerzogFramework\Herzog.Business\bin\Debug\Herzog.Business.dll
+D:\HerzogFramework\HerzogFramework\Herzog.Business\bin\Debug\Herzog.Business.pdb
+D:\HerzogFramework\HerzogFramework\Herzog.Business\obj\Debug\Herzog.Business.dll
+D:\HerzogFramework\HerzogFramework\Herzog.Business\obj\Debug\Herzog.Business.pdb

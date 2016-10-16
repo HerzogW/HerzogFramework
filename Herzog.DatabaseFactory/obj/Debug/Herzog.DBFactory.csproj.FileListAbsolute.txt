@@ -2,3 +2,7 @@ E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.DatabaseFactory\bin\Debug\He
 E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.DatabaseFactory\bin\Debug\Herzog.DBFactory.pdb
 E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.DatabaseFactory\obj\Debug\Herzog.DBFactory.dll
 E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.DatabaseFactory\obj\Debug\Herzog.DBFactory.pdb
+D:\HerzogFramework\HerzogFramework\Herzog.DatabaseFactory\bin\Debug\Herzog.DBFactory.dll
+D:\HerzogFramework\HerzogFramework\Herzog.DatabaseFactory\bin\Debug\Herzog.DBFactory.pdb
+D:\HerzogFramework\HerzogFramework\Herzog.DatabaseFactory\obj\Debug\Herzog.DBFactory.dll
+D:\HerzogFramework\HerzogFramework\Herzog.DatabaseFactory\obj\Debug\Herzog.DBFactory.pdb

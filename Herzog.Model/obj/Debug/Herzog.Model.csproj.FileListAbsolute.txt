@@ -2,3 +2,8 @@ E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Model\bin\Debug\Herzog.Model
 E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Model\bin\Debug\Herzog.Model.pdb
 E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Model\obj\Debug\Herzog.Model.dll
 E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Model\obj\Debug\Herzog.Model.pdb
+D:\HerzogFramework\HerzogFramework\Herzog.Model\bin\Debug\Herzog.Model.dll
+D:\HerzogFramework\HerzogFramework\Herzog.Model\bin\Debug\Herzog.Model.pdb
+D:\HerzogFramework\HerzogFramework\Herzog.Model\obj\Debug\Herzog.Model.csprojResolveAssemblyReference.cache
+D:\HerzogFramework\HerzogFramework\Herzog.Model\obj\Debug\Herzog.Model.dll
+D:\HerzogFramework\HerzogFramework\Herzog.Model\obj\Debug\Herzog.Model.pdb
