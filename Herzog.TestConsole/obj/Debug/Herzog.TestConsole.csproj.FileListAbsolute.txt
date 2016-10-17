@@ -12,3 +12,17 @@ E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.TestConsole\bin\Debug\Herzog
 E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.TestConsole\obj\Debug\Herzog.TestConsole.csprojResolveAssemblyReference.cache
 E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.TestConsole\obj\Debug\Herzog.TestConsole.exe
 E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.TestConsole\obj\Debug\Herzog.TestConsole.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.TestConsole\bin\Debug\Herzog.TestConsole.exe.config
+E:\HerzogFramework\HerzogFramework\Herzog.TestConsole\obj\Debug\Herzog.TestConsole.exe
+E:\HerzogFramework\HerzogFramework\Herzog.TestConsole\obj\Debug\Herzog.TestConsole.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.TestConsole\bin\Debug\Herzog.TestConsole.exe
+E:\HerzogFramework\HerzogFramework\Herzog.TestConsole\bin\Debug\Herzog.TestConsole.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.TestConsole\bin\Debug\Herzog.Database.dll
+E:\HerzogFramework\HerzogFramework\Herzog.TestConsole\bin\Debug\Herzog.Model.dll
+E:\HerzogFramework\HerzogFramework\Herzog.TestConsole\bin\Debug\Herzog.Dapper.Contrib.dll
+E:\HerzogFramework\HerzogFramework\Herzog.TestConsole\bin\Debug\Herzog.Dapper.dll
+E:\HerzogFramework\HerzogFramework\Herzog.TestConsole\bin\Debug\Herzog.Database.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.TestConsole\bin\Debug\Herzog.Model.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.TestConsole\bin\Debug\Herzog.Dapper.Contrib.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.TestConsole\bin\Debug\Herzog.Dapper.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.TestConsole\obj\Debug\Herzog.TestConsole.csprojResolveAssemblyReference.cache

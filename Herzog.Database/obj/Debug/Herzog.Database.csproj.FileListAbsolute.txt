@@ -11,3 +11,16 @@ E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Database\bin\Debug\Herzog.Da
 E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Database\bin\Debug\Herzog.Dapper.dll
 E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Database\bin\Debug\Herzog.Dapper.Contrib.pdb
 E:\PersonalWorkspaces\Net\MyFramework\Herzog\Herzog.Database\bin\Debug\Herzog.Dapper.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.Database\bin\Debug\Herzog.Database.dll
+E:\HerzogFramework\HerzogFramework\Herzog.Database\bin\Debug\Herzog.Database.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.Database\bin\Debug\Dapper.Contrib.dll
+E:\HerzogFramework\HerzogFramework\Herzog.Database\bin\Debug\Dapper.dll
+E:\HerzogFramework\HerzogFramework\Herzog.Database\bin\Debug\Herzog.Dapper.Contrib.dll
+E:\HerzogFramework\HerzogFramework\Herzog.Database\bin\Debug\Herzog.Dapper.dll
+E:\HerzogFramework\HerzogFramework\Herzog.Database\bin\Debug\SQLinq.dll
+E:\HerzogFramework\HerzogFramework\Herzog.Database\bin\Debug\Herzog.Dapper.Contrib.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.Database\bin\Debug\Herzog.Dapper.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.Database\bin\Debug\Dapper.xml
+E:\HerzogFramework\HerzogFramework\Herzog.Database\obj\Debug\Herzog.Database.csprojResolveAssemblyReference.cache
+E:\HerzogFramework\HerzogFramework\Herzog.Database\obj\Debug\Herzog.Database.dll
+E:\HerzogFramework\HerzogFramework\Herzog.Database\obj\Debug\Herzog.Database.pdb
