@@ -6,3 +6,8 @@ D:\HerzogFramework\HerzogFramework\Herzog.Dapper\bin\Debug\Herzog.Dapper.dll
 D:\HerzogFramework\HerzogFramework\Herzog.Dapper\bin\Debug\Herzog.Dapper.pdb
 D:\HerzogFramework\HerzogFramework\Herzog.Dapper\obj\Debug\Herzog.Dapper.dll
 D:\HerzogFramework\HerzogFramework\Herzog.Dapper\obj\Debug\Herzog.Dapper.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.Dapper\bin\Debug\Herzog.Dapper.dll
+E:\HerzogFramework\HerzogFramework\Herzog.Dapper\bin\Debug\Herzog.Dapper.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.Dapper\obj\Debug\Herzog.Dapper.dll
+E:\HerzogFramework\HerzogFramework\Herzog.Dapper\obj\Debug\Herzog.Dapper.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.Dapper\obj\Debug\Herzog.Dapper.csprojResolveAssemblyReference.cache

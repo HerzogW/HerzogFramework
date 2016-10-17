@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154}</ProjectGuid>
+    <ProjectGuid>{D34641F4-F241-4D1B-90B5-F553B27FA4B8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Herzog.DBFactory</RootNamespace>
-    <AssemblyName>Herzog.DBFactory</AssemblyName>
+    <RootNamespace>Herzog.OracleDB</RootNamespace>
+    <AssemblyName>Herzog.OracleDB</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,7 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.24160719\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,7 +45,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OracleDb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Herzog.Dapper.Contrib\Herzog.Dapper.Contrib.csproj">
+      <Project>{5cbb4394-dd4d-4aa5-8181-faebb0e779eb}</Project>
+      <Name>Herzog.Dapper.Contrib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Herzog.Dapper\Herzog.Dapper.csproj">
+      <Project>{0f7bc344-27ce-41d0-a862-44f4f3249b59}</Project>
+      <Name>Herzog.Dapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Herzog.Interface\Herzog.Interface.csproj">
+      <Project>{dbcccdc4-4ea1-4cd3-9606-04f0c5132e76}</Project>
+      <Name>Herzog.Interface</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

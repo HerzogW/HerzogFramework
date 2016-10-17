@@ -1,165 +1,158 @@
-﻿using System;
+﻿using Herzog.Dapper;
+using Herzog.Dapper.Contrib.Extensions;
+using Herzog.Interface;
+using System.Collections;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Herzog.SqlServerDB
 {
-    public class SqlServerDb
+    public class SqlServerDb : IDataBase
     {
-        private readonly string sqlconnectionstring = ConfigurationManager.AppSettings["DefaultConnection"].ToString();
+        private readonly string SqlConnectionString;
 
-        public int Execute(string sqlCommand)
+        public SqlServerDb(string connectionString)
         {
-            int result = 0;
-            using (SqlConnection conn = new SqlConnection(sqlconnectionstring))
+            SqlConnectionString = connectionString;
+        }
+
+        public bool Insert<T>(T Entity) where T : class
+        {
+            using (SqlConnection conn = new SqlConnection(SqlConnectionString))
             {
                 conn.Open();
-                SqlCommand command = new SqlCommand(sqlCommand, conn);
-                result = command.ExecuteNonQuery();
+                return conn.Insert<T>(Entity);
             }
-
-            return result;
         }
 
-
-        #region 查询Query
-
-        public DataSet ExecuteQuery(string sqlCommand)
+        public bool Insert<T>(T Entity, IDbTransaction transaction = null, int? commandTimeOut = null) where T : class
         {
-            DataSet dataset = new DataSet();
-            using (SqlConnection conn = new SqlConnection(sqlconnectionstring))
+            using (SqlConnection conn = new SqlConnection(SqlConnectionString))
             {
                 conn.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand, conn);
-                adapter.Fill(dataset);
+                return conn.Insert<T>(Entity, transaction, commandTimeOut);
             }
-
-            return dataset;
         }
 
-        public DataSet ExecureQuery(string sqlCommand, IDataParameter[] parameters)
+        public bool Update<T>(T Entity) where T : class
         {
-            DataSet dataset = new DataSet();
-            using (SqlConnection conn = new SqlConnection(sqlconnectionstring))
+            using (SqlConnection conn = new SqlConnection(SqlConnectionString))
             {
                 conn.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                adapter.SelectCommand = BuildQueryCommand(conn, sqlCommand, parameters);
-                adapter.Fill(dataset);
+                return conn.Update<T>(Entity);
             }
-
-            return dataset;
         }
 
-        private SqlCommand BuildQueryCommand(SqlConnection connection, string sqlCommand, IDataParameter[] parameters)
+        public bool Update<T>(T Entity, IDbTransaction transaction = null, int? commandTimeOut = null) where T : class
         {
-            SqlCommand command = new SqlCommand(sqlCommand, connection);
-            command.CommandType = CommandType.Text;
-            foreach (SqlParameter parameter in parameters)
+            using (SqlConnection conn = new SqlConnection(SqlConnectionString))
             {
-                if (parameter != null)
-                {
-                    if (parameter.Value == null)
-                    {
-                        parameter.Value = DBNull.Value;
-                    }
-
-                    command.Parameters.Add(parameter);
-                }
+                conn.Open();
+                return conn.Update<T>(Entity, transaction, commandTimeOut);
             }
-
-            return command;
         }
 
-        #endregion
+        public bool Delete<T>(T Entity) where T : class
+        {
+            using (SqlConnection conn = new SqlConnection(SqlConnectionString))
+            {
+                conn.Open();
+                return conn.Delete<T>(Entity);
+            }
+        }
 
+        public bool Delete<T>(T Entity, IDbTransaction transaction = null, int? commandTimeOut = null) where T : class
+        {
+            using (SqlConnection conn = new SqlConnection(SqlConnectionString))
+            {
+                conn.Open();
+                return conn.Delete<T>(Entity, transaction, commandTimeOut);
+            }
+        }
+
+        public bool DeleteAll<T>(IDbTransaction transaction = null, int? commandTimeOut = null) where T : class
+        {
+            using (SqlConnection conn = new SqlConnection(SqlConnectionString))
+            {
+                conn.Open();
+                return conn.DeleteAll<T>(transaction, commandTimeOut);
+            }
+        }
+
+        public T Get<T>(string id) where T : class
+        {
+            using (SqlConnection conn = new SqlConnection(SqlConnectionString))
+            {
+                conn.Open();
+                return conn.Get<T>(id);
+            }
+        }
+
+        public T Get<T>(string id, IDbTransaction transaction, int? commandTimeOut) where T : class
+        {
+            using (SqlConnection conn = new SqlConnection(SqlConnectionString))
+            {
+                conn.Open();
+                return conn.Get<T>(id, transaction, commandTimeOut);
+            }
+        }
+
+        public IEnumerable<T> GetAll<T>() where T : class
+        {
+            using (SqlConnection conn = new SqlConnection(SqlConnectionString))
+            {
+                conn.Open();
+                return conn.GetAll<T>();
+            }
+        }
+
+        public IEnumerable<T> GetAll<T>(IDbTransaction transaction, int? commandTimeOut) where T : class
+        {
+            using (SqlConnection conn = new SqlConnection(SqlConnectionString))
+            {
+                conn.Open();
+                return conn.GetAll<T>(transaction, commandTimeOut);
+            }
+        }
+
+
+        public IEnumerable<T> Query<T>(string sqlCommand)
+        {
+            using (SqlConnection conn = new SqlConnection(SqlConnectionString))
+            {
+                conn.Open();
+                return conn.Query<T>(sqlCommand);
+            }
+        }
+
+        public IEnumerable<T> Query<T>(string sqlCommand, object parameters)
+        {
+            using (SqlConnection conn = new SqlConnection(SqlConnectionString))
+            {
+                conn.Open();
+                return conn.Query<T>(sqlCommand, parameters);
+            }
+        }
+
+        public IEnumerable<T> Query<T>(string sqlCommand, object parameters = null, IDbTransaction transaction = null, bool buffered = false, int? commandTimeout = default(int?), CommandType? commandType = default(CommandType?))
+        {
+            using (SqlConnection conn = new SqlConnection(SqlConnectionString))
+            {
+                conn.Open();
+                return conn.Query<T>(sqlCommand, parameters, transaction, buffered, commandTimeout, commandType);
+            }
+        }
 
         #region 存储过程
 
-        public SqlDataReader RunProcedure(string storedProcName, IDataParameter[] parameters)
+        public IEnumerable<T> RunProcedure<T>(string storedProcName, IDictionary[] parameters)
         {
-            using (SqlConnection conn = new SqlConnection(sqlconnectionstring))
+            using (SqlConnection conn = new SqlConnection(SqlConnectionString))
             {
                 conn.Open();
-                SqlCommand command = BuildProcQueryCommand(conn, storedProcName, parameters);
-                return command.ExecuteReader(CommandBehavior.CloseConnection);
+                return conn.Query<T>(storedProcName, parameters, null, false, null, CommandType.StoredProcedure);
             }
-        }
-
-        public DataSet RunProcedure(string storedProcName, IDataParameter[] parameters, string tableName)
-        {
-            DataSet dataset = new DataSet();
-            using (SqlConnection conn = new SqlConnection(sqlconnectionstring))
-            {
-                conn.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                adapter.SelectCommand = BuildProcQueryCommand(conn, storedProcName, parameters);
-                adapter.Fill(dataset, tableName);
-            }
-
-            return dataset;
-        }
-
-        public DataSet RunProcedure(string storedProcName, IDataParameter[] parameters, string tableName, int times)
-        {
-            DataSet dataset = new DataSet();
-            using (SqlConnection conn = new SqlConnection(sqlconnectionstring))
-            {
-                conn.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                adapter.SelectCommand = BuildProcQueryCommand(conn, storedProcName, parameters);
-                adapter.SelectCommand.CommandTimeout = times;
-                adapter.Fill(dataset);
-            }
-
-            return dataset;
-        }
-
-        public object RunProcdure(string storedProcName, IDataParameter[] parameters, string OutputName)
-        {
-            object obj;
-            using (SqlConnection conn = new SqlConnection(sqlconnectionstring))
-            {
-                conn.Open();
-                SqlCommand command = BuildProcQueryCommand(conn, storedProcName, parameters);
-                command.ExecuteNonQuery();
-                obj = command.Parameters[OutputName].Value;
-            }
-
-            if (Object.Equals(obj, null) || Object.Equals(obj, DBNull.Value))
-            {
-                return null;
-            }
-            else
-            {
-                return obj;
-            }
-        }
-
-        private SqlCommand BuildProcQueryCommand(SqlConnection connection, string storedProcName, IDataParameter[] parameters)
-        {
-            SqlCommand command = new SqlCommand(storedProcName, connection);
-            command.CommandType = CommandType.StoredProcedure;
-            foreach (SqlParameter parameter in parameters)
-            {
-                if (parameter != null)
-                {
-                    //if (parameter.Direction == ParameterDirection.InputOutput || parameter.Direction == ParameterDirection.Input)
-                    if (parameter.Value == null)
-                    {
-                        parameter.Value = DBNull.Value;
-                    }
-
-                    command.Parameters.Add(parameter);
-                }
-            }
-
-            return command;
         }
 
         #endregion

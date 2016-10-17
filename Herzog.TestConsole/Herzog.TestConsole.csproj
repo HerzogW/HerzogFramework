@@ -50,9 +50,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Herzog.Database\Herzog.Database.csproj">
-      <Project>{708DA087-6D71-48C1-A99A-3C169D3B7F87}</Project>
-      <Name>Herzog.Database</Name>
+    <ProjectReference Include="..\Herzog.DatabaseFactory\Herzog.Factory.csproj">
+      <Project>{1938c8e1-efbf-46b3-9bfd-7c2ea68e3154}</Project>
+      <Name>Herzog.Factory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Herzog.Interface\Herzog.Interface.csproj">
+      <Project>{dbcccdc4-4ea1-4cd3-9606-04f0c5132e76}</Project>
+      <Name>Herzog.Interface</Name>
     </ProjectReference>
     <ProjectReference Include="..\Herzog.Model\Herzog.Model.csproj">
       <Project>{b8e1c4c3-588d-447f-a481-69aa7cfffe39}</Project>

@@ -6,3 +6,8 @@ D:\HerzogFramework\HerzogFramework\Herzog.IDatabase\bin\Debug\Herzog.IDatabase.d
 D:\HerzogFramework\HerzogFramework\Herzog.IDatabase\bin\Debug\Herzog.IDatabase.pdb
 D:\HerzogFramework\HerzogFramework\Herzog.IDatabase\obj\Debug\Herzog.IDatabase.dll
 D:\HerzogFramework\HerzogFramework\Herzog.IDatabase\obj\Debug\Herzog.IDatabase.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.IDatabase\bin\Debug\Herzog.IDatabase.dll
+E:\HerzogFramework\HerzogFramework\Herzog.IDatabase\bin\Debug\Herzog.IDatabase.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.IDatabase\obj\Debug\Herzog.IDatabase.dll
+E:\HerzogFramework\HerzogFramework\Herzog.IDatabase\obj\Debug\Herzog.IDatabase.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.IDatabase\obj\Debug\Herzog.IDatabase.csprojResolveAssemblyReference.cache

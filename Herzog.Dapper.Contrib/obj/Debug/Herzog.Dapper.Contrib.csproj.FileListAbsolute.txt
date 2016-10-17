@@ -12,3 +12,10 @@ D:\HerzogFramework\HerzogFramework\Herzog.Dapper.Contrib\bin\Debug\Herzog.Dapper
 D:\HerzogFramework\HerzogFramework\Herzog.Dapper.Contrib\obj\Debug\Herzog.Dapper.Contrib.csprojResolveAssemblyReference.cache
 D:\HerzogFramework\HerzogFramework\Herzog.Dapper.Contrib\obj\Debug\Herzog.Dapper.Contrib.dll
 D:\HerzogFramework\HerzogFramework\Herzog.Dapper.Contrib\obj\Debug\Herzog.Dapper.Contrib.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.Dapper.Contrib\bin\Debug\Herzog.Dapper.Contrib.dll
+E:\HerzogFramework\HerzogFramework\Herzog.Dapper.Contrib\bin\Debug\Herzog.Dapper.Contrib.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.Dapper.Contrib\bin\Debug\Herzog.Dapper.dll
+E:\HerzogFramework\HerzogFramework\Herzog.Dapper.Contrib\bin\Debug\Herzog.Dapper.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.Dapper.Contrib\obj\Debug\Herzog.Dapper.Contrib.csprojResolveAssemblyReference.cache
+E:\HerzogFramework\HerzogFramework\Herzog.Dapper.Contrib\obj\Debug\Herzog.Dapper.Contrib.dll
+E:\HerzogFramework\HerzogFramework\Herzog.Dapper.Contrib\obj\Debug\Herzog.Dapper.Contrib.pdb

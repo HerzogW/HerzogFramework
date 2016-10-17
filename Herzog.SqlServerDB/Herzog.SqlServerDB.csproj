@@ -51,6 +51,20 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Herzog.Dapper.Contrib\Herzog.Dapper.Contrib.csproj">
+      <Project>{5cbb4394-dd4d-4aa5-8181-faebb0e779eb}</Project>
+      <Name>Herzog.Dapper.Contrib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Herzog.Dapper\Herzog.Dapper.csproj">
+      <Project>{0f7bc344-27ce-41d0-a862-44f4f3249b59}</Project>
+      <Name>Herzog.Dapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Herzog.Interface\Herzog.Interface.csproj">
+      <Project>{dbcccdc4-4ea1-4cd3-9606-04f0c5132e76}</Project>
+      <Name>Herzog.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

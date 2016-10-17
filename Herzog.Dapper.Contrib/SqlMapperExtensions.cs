@@ -49,6 +49,7 @@ namespace Herzog.Dapper.Contrib.Extensions
                 {"npgsqlconnection", new PostgresAdapter()},
                 {"sqliteconnection", new SQLiteAdapter()},
                 {"mysqlconnection", new MySqlAdapter()},
+                {"oracleconnection", new OracleAdapter()},
             };
 
         private static List<PropertyInfo> ComputedPropertiesCache(Type type)
@@ -324,98 +325,6 @@ namespace Herzog.Dapper.Contrib.Extensions
 
             return name;
         }
-
-
-        ///// <summary>
-        ///// Inserts an entity into table "Ts" and returns identity id or number if inserted rows if inserting a list.
-        ///// </summary>
-        ///// <param name="connection">Open SqlConnection</param>
-        ///// <param name="entityToInsert">Entity to insert, can be list of entities</param>
-        ///// <param name="transaction">The transaction to run under, null (the default) if none</param>
-        ///// <param name="commandTimeout">Number of seconds before command execution timeout</param>
-        ///// <returns>Identity of inserted entity, or number of inserted rows if inserting a list</returns>
-        //public static long Insert<T>(this IDbConnection connection, T entityToInsert, IDbTransaction transaction = null, int? commandTimeout = null) where T : class
-        //{
-        //    var isList = false;
-
-        //    var type = typeof(T);
-
-        //    if (type.IsArray)
-        //    {
-        //        isList = true;
-        //        type = type.GetElementType();
-        //    }
-        //    else if (type.IsGenericType())
-        //    {
-        //        isList = true;
-        //        type = type.GetGenericArguments()[0];
-        //    }
-
-        //    var name = GetTableName(type);
-        //    var sbColumnList = new StringBuilder(null);
-        //    var allProperties = TypePropertiesCache(type);
-        //    var keyProperties = KeyPropertiesCache(type);
-        //    var computedProperties = ComputedPropertiesCache(type);
-        //    #region
-        //    //var allPropertiesExceptKeyAndComputed = allProperties.Except(keyProperties.Union(computedProperties)).ToList();
-
-        //    //var adapter = GetFormatter(connection);
-
-        //    //for (var i = 0; i < allPropertiesExceptKeyAndComputed.Count; i++)
-        //    //{
-        //    //    var property = allPropertiesExceptKeyAndComputed.ElementAt(i);
-        //    //    adapter.AppendColumnName(sbColumnList, property.Name);  //fix for issue #336
-        //    //    if (i < allPropertiesExceptKeyAndComputed.Count - 1)
-        //    //        sbColumnList.Append(", ");
-        //    //}
-
-        //    //var sbParameterList = new StringBuilder(null);
-        //    //for (var i = 0; i < allPropertiesExceptKeyAndComputed.Count; i++)
-        //    //{
-        //    //    var property = allPropertiesExceptKeyAndComputed.ElementAt(i);
-        //    //    sbParameterList.AppendFormat("@{0}", property.Name);
-        //    //    if (i < allPropertiesExceptKeyAndComputed.Count - 1)
-        //    //        sbParameterList.Append(", ");
-        //    //}
-        //    #endregion
-        //    var adapter = GetFormatter(connection);
-
-        //    for (var i = 0; i < allProperties.Count; i++)
-        //    {
-        //        var property = allProperties.ElementAt(i);
-        //        adapter.AppendColumnName(sbColumnList, property.Name);  //fix for issue #336
-        //        if (i < allProperties.Count - 1)
-        //            sbColumnList.Append(", ");
-        //    }
-
-        //    var sbParameterList = new StringBuilder(null);
-        //    for (var i = 0; i < allProperties.Count; i++)
-        //    {
-        //        var property = allProperties.ElementAt(i);
-        //        sbParameterList.AppendFormat("@{0}", property.Name);
-        //        if (i < allProperties.Count - 1)
-        //            sbParameterList.Append(", ");
-        //    }
-
-        //    int returnVal;
-        //    var wasClosed = connection.State == ConnectionState.Closed;
-        //    if (wasClosed) connection.Open();
-
-        //    if (!isList)    //single entity
-        //    {
-        //        returnVal = adapter.Insert(connection, transaction, commandTimeout, name, sbColumnList.ToString(),
-        //            sbParameterList.ToString(), keyProperties, entityToInsert);
-        //    }
-        //    else
-        //    {
-        //        //insert list of entities
-        //        var cmd = $"insert into {name} ({sbColumnList}) values ({sbParameterList})";
-        //        returnVal = connection.Execute(cmd, entityToInsert, transaction, commandTimeout);
-        //    }
-        //    if (wasClosed) connection.Close();
-        //    return returnVal;
-        //}
-
 
         /// <summary>
         /// Updates entity in table "Ts", checks if the entity is modified if the entity is tracked by the Get() extension.
@@ -821,8 +730,6 @@ namespace Herzog.Dapper.Contrib.Extensions
 
 public partial interface ISqlAdapter
 {
-    int Insert(IDbConnection connection, IDbTransaction transaction, int? commandTimeout, string tableName, string columnList, string parameterList, IEnumerable<PropertyInfo> keyProperties, object entityToInsert);
-
     //new methods for issue #336
     void AppendColumnName(StringBuilder sb, string columnName);
 
@@ -833,24 +740,6 @@ public partial interface ISqlAdapter
 
 public partial class SqlServerAdapter : ISqlAdapter
 {
-    public int Insert(IDbConnection connection, IDbTransaction transaction, int? commandTimeout, string tableName, string columnList, string parameterList, IEnumerable<PropertyInfo> keyProperties, object entityToInsert)
-    {
-        var cmd = $"insert into {tableName} ({columnList}) values ({parameterList});"; //select SCOPE_IDENTITY() id
-        var multi = connection.QueryMultiple(cmd, entityToInsert, transaction, commandTimeout);
-
-        var first = multi.Read().FirstOrDefault();
-        if (first == null || first.id == null) return 0;
-
-        var id = (int)first.id;
-        var propertyInfos = keyProperties as PropertyInfo[] ?? keyProperties.ToArray();
-        if (!propertyInfos.Any()) return id;
-
-        var idProperty = propertyInfos.First();
-        idProperty.SetValue(entityToInsert, Convert.ChangeType(id, idProperty.PropertyType), null);
-
-        return id;
-    }
-
     public void AppendColumnName(StringBuilder sb, string columnName)
     {
         sb.AppendFormat("[{0}]", columnName);
@@ -869,24 +758,6 @@ public partial class SqlServerAdapter : ISqlAdapter
 
 public partial class SqlCeServerAdapter : ISqlAdapter
 {
-    public int Insert(IDbConnection connection, IDbTransaction transaction, int? commandTimeout, string tableName, string columnList, string parameterList, IEnumerable<PropertyInfo> keyProperties, object entityToInsert)
-    {
-        var cmd = $"insert into {tableName} ({columnList}) values ({parameterList})";
-        connection.Execute(cmd, entityToInsert, transaction, commandTimeout);
-        var r = connection.Query("select @@IDENTITY id", transaction: transaction, commandTimeout: commandTimeout).ToList();
-
-        if (r.First().id == null) return 0;
-        var id = (int)r.First().id;
-
-        var propertyInfos = keyProperties as PropertyInfo[] ?? keyProperties.ToArray();
-        if (!propertyInfos.Any()) return id;
-
-        var idProperty = propertyInfos.First();
-        idProperty.SetValue(entityToInsert, Convert.ChangeType(id, idProperty.PropertyType), null);
-
-        return id;
-    }
-
     public void AppendColumnName(StringBuilder sb, string columnName)
     {
         sb.AppendFormat("[{0}]", columnName);
@@ -905,23 +776,6 @@ public partial class SqlCeServerAdapter : ISqlAdapter
 
 public partial class MySqlAdapter : ISqlAdapter
 {
-    public int Insert(IDbConnection connection, IDbTransaction transaction, int? commandTimeout, string tableName, string columnList, string parameterList, IEnumerable<PropertyInfo> keyProperties, object entityToInsert)
-    {
-        var cmd = $"insert into {tableName} ({columnList}) values ({parameterList})";
-        connection.Execute(cmd, entityToInsert, transaction, commandTimeout);
-        var r = connection.Query("Select LAST_INSERT_ID() id", transaction: transaction, commandTimeout: commandTimeout);
-
-        var id = r.First().id;
-        if (id == null) return 0;
-        var propertyInfos = keyProperties as PropertyInfo[] ?? keyProperties.ToArray();
-        if (!propertyInfos.Any()) return Convert.ToInt32(id);
-
-        var idp = propertyInfos.First();
-        idp.SetValue(entityToInsert, Convert.ChangeType(id, idp.PropertyType), null);
-
-        return Convert.ToInt32(id);
-    }
-
     public void AppendColumnName(StringBuilder sb, string columnName)
     {
         sb.AppendFormat("`{0}`", columnName);
@@ -941,42 +795,6 @@ public partial class MySqlAdapter : ISqlAdapter
 
 public partial class PostgresAdapter : ISqlAdapter
 {
-    public int Insert(IDbConnection connection, IDbTransaction transaction, int? commandTimeout, string tableName, string columnList, string parameterList, IEnumerable<PropertyInfo> keyProperties, object entityToInsert)
-    {
-        var sb = new StringBuilder();
-        sb.AppendFormat("insert into {0} ({1}) values ({2})", tableName, columnList, parameterList);
-
-        // If no primary key then safe to assume a join table with not too much data to return
-        var propertyInfos = keyProperties as PropertyInfo[] ?? keyProperties.ToArray();
-        if (!propertyInfos.Any())
-            sb.Append(" RETURNING *");
-        else
-        {
-            sb.Append(" RETURNING ");
-            var first = true;
-            foreach (var property in propertyInfos)
-            {
-                if (!first)
-                    sb.Append(", ");
-                first = false;
-                sb.Append(property.Name);
-            }
-        }
-
-        var results = connection.Query(sb.ToString(), entityToInsert, transaction, commandTimeout: commandTimeout).ToList();
-
-        // Return the key by assinging the corresponding property in the object - by product is that it supports compound primary keys
-        var id = 0;
-        foreach (var p in propertyInfos)
-        {
-            var value = ((IDictionary<string, object>)results.First())[p.Name.ToLower()];
-            p.SetValue(entityToInsert, value, null);
-            if (id == 0)
-                id = Convert.ToInt32(value);
-        }
-        return id;
-    }
-
     public void AppendColumnName(StringBuilder sb, string columnName)
     {
         sb.AppendFormat("\"{0}\"", columnName);
@@ -995,21 +813,6 @@ public partial class PostgresAdapter : ISqlAdapter
 
 public partial class SQLiteAdapter : ISqlAdapter
 {
-    public int Insert(IDbConnection connection, IDbTransaction transaction, int? commandTimeout, string tableName, string columnList, string parameterList, IEnumerable<PropertyInfo> keyProperties, object entityToInsert)
-    {
-        var cmd = $"INSERT INTO {tableName} ({columnList}) VALUES ({parameterList}); SELECT last_insert_rowid() id";
-        var multi = connection.QueryMultiple(cmd, entityToInsert, transaction, commandTimeout);
-
-        var id = (int)multi.Read().First().id;
-        var propertyInfos = keyProperties as PropertyInfo[] ?? keyProperties.ToArray();
-        if (!propertyInfos.Any()) return id;
-
-        var idProperty = propertyInfos.First();
-        idProperty.SetValue(entityToInsert, Convert.ChangeType(id, idProperty.PropertyType), null);
-
-        return id;
-    }
-
     public void AppendColumnName(StringBuilder sb, string columnName)
     {
         sb.AppendFormat("\"{0}\"", columnName);
@@ -1023,5 +826,23 @@ public partial class SQLiteAdapter : ISqlAdapter
     public void AppendColumnNameEqualsValue(StringBuilder sb, string columnName, string propertyName)
     {
         sb.AppendFormat("\"{0}\" = @{1}", columnName, propertyName);
+    }
+}
+
+public partial class OracleAdapter : ISqlAdapter
+{
+    public void AppendColumnName(StringBuilder sb, string columnName)
+    {
+        sb.AppendFormat("[{0}]", columnName);
+    }
+
+    public void AppendColumnNameEqualsValue(StringBuilder sb, string columnName)
+    {
+        sb.AppendFormat("[{0}] = @{1}", columnName, columnName);
+    }
+
+    public void AppendColumnNameEqualsValue(StringBuilder sb, string columnName, string propertyName)
+    {
+        sb.AppendFormat("[{0}] = @{1}", columnName, propertyName);
     }
 }

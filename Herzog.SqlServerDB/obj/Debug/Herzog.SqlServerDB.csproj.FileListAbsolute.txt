@@ -10,3 +10,16 @@ D:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\bin\Debug\Dapper.dll
 D:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\bin\Debug\Dapper.xml
 D:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\obj\Debug\Herzog.SqlServerDB.dll
 D:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\obj\Debug\Herzog.SqlServerDB.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\bin\Debug\Herzog.SqlServerDB.dll
+E:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\bin\Debug\Herzog.SqlServerDB.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\bin\Debug\Dapper.dll
+E:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\bin\Debug\Herzog.Dapper.Contrib.dll
+E:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\bin\Debug\Herzog.Dapper.dll
+E:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\bin\Debug\Herzog.Dapper.Contrib.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\bin\Debug\Herzog.Dapper.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\bin\Debug\Dapper.xml
+E:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\obj\Debug\Herzog.SqlServerDB.csprojResolveAssemblyReference.cache
+E:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\obj\Debug\Herzog.SqlServerDB.dll
+E:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\obj\Debug\Herzog.SqlServerDB.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\bin\Debug\Herzog.Interface.dll
+E:\HerzogFramework\HerzogFramework\Herzog.SqlServerDB\bin\Debug\Herzog.Interface.pdb

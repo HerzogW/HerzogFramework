@@ -7,3 +7,8 @@ D:\HerzogFramework\HerzogFramework\Herzog.Model\bin\Debug\Herzog.Model.pdb
 D:\HerzogFramework\HerzogFramework\Herzog.Model\obj\Debug\Herzog.Model.csprojResolveAssemblyReference.cache
 D:\HerzogFramework\HerzogFramework\Herzog.Model\obj\Debug\Herzog.Model.dll
 D:\HerzogFramework\HerzogFramework\Herzog.Model\obj\Debug\Herzog.Model.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.Model\bin\Debug\Herzog.Model.dll
+E:\HerzogFramework\HerzogFramework\Herzog.Model\bin\Debug\Herzog.Model.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.Model\obj\Debug\Herzog.Model.csprojResolveAssemblyReference.cache
+E:\HerzogFramework\HerzogFramework\Herzog.Model\obj\Debug\Herzog.Model.dll
+E:\HerzogFramework\HerzogFramework\Herzog.Model\obj\Debug\Herzog.Model.pdb
