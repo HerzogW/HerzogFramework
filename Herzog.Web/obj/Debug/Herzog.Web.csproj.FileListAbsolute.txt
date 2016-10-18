@@ -82,8 +82,6 @@ E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\Herzog.Web.dll.config
 E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\Herzog.Web.dll
 E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\Herzog.Web.pdb
 E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\Antlr3.Runtime.dll
-E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\EntityFramework.dll
-E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\EntityFramework.SqlServer.dll
 E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\Microsoft.AspNet.Identity.Core.dll
 E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\Microsoft.AspNet.Identity.Owin.dll
@@ -118,8 +116,6 @@ E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\System.Web.WebPages.Deployment
 E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\System.Web.WebPages.Razor.xml
 E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\Antlr3.Runtime.pdb
 E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\Newtonsoft.Json.xml
-E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\EntityFramework.xml
-E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\EntityFramework.SqlServer.xml
 E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\Microsoft.AspNet.Identity.Core.xml
 E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\Microsoft.AspNet.Identity.Owin.xml
 E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml

@@ -45,8 +45,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Herzog.DatabaseFactory\Herzog.Factory.csproj">
-      <Project>{1938c8e1-efbf-46b3-9bfd-7c2ea68e3154}</Project>
+    <ProjectReference Include="..\Herzog.Factory\Herzog.Factory.csproj">
+      <Project>{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154}</Project>
       <Name>Herzog.Factory</Name>
     </ProjectReference>
     <ProjectReference Include="..\Herzog.Interface\Herzog.Interface.csproj">

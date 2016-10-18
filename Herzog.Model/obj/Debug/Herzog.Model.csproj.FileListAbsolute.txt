@@ -11,4 +11,3 @@ E:\HerzogFramework\HerzogFramework\Herzog.Model\bin\Debug\Herzog.Model.dll
 E:\HerzogFramework\HerzogFramework\Herzog.Model\bin\Debug\Herzog.Model.pdb
 E:\HerzogFramework\HerzogFramework\Herzog.Model\obj\Debug\Herzog.Model.dll
 E:\HerzogFramework\HerzogFramework\Herzog.Model\obj\Debug\Herzog.Model.pdb
-E:\HerzogFramework\HerzogFramework\Herzog.Model\obj\Debug\Herzog.Model.csprojResolveAssemblyReference.cache

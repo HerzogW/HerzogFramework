@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herzog.Factory", "Herzog.DatabaseFactory\Herzog.Factory.csproj", "{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herzog.Model", "Herzog.Model\Herzog.Model.csproj", "{B8E1C4C3-588D-447F-A481-69AA7CFFFE39}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Herzog.DataAccess", "Herzog.DataAccess", "{F3127125-D1B2-437B-9B8E-CA85F16581D0}"
@@ -33,16 +31,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Herzog.Data", "Herzog.Data"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herzog.Common", "Herzog.Common\Herzog.Common.csproj", "{2A8708D3-9692-4A70-B2C0-E877D4DF0A77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herzog.Factory", "Herzog.Factory\Herzog.Factory.csproj", "{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B8E1C4C3-588D-447F-A481-69AA7CFFFE39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B8E1C4C3-588D-447F-A481-69AA7CFFFE39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8E1C4C3-588D-447F-A481-69AA7CFFFE39}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -87,12 +83,15 @@ Global
 		{2A8708D3-9692-4A70-B2C0-E877D4DF0A77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A8708D3-9692-4A70-B2C0-E877D4DF0A77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A8708D3-9692-4A70-B2C0-E877D4DF0A77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154} = {F3127125-D1B2-437B-9B8E-CA85F16581D0}
 		{F3127125-D1B2-437B-9B8E-CA85F16581D0} = {4964B79A-4635-4AD9-852E-6B7FCE9C9CE5}
 		{5F6BCB3D-E1A1-41A1-AF8F-2E7A6636EAE6} = {F3127125-D1B2-437B-9B8E-CA85F16581D0}
 		{90ED64F9-9D8F-4715-BA25-FD777C7E21C6} = {4964B79A-4635-4AD9-852E-6B7FCE9C9CE5}
@@ -101,5 +100,6 @@ Global
 		{93458024-6EC0-4384-8F25-1F0D4FB97D86} = {F3127125-D1B2-437B-9B8E-CA85F16581D0}
 		{D34641F4-F241-4D1B-90B5-F553B27FA4B8} = {F3127125-D1B2-437B-9B8E-CA85F16581D0}
 		{DBCCCDC4-4EA1-4CD3-9606-04F0C5132E76} = {F3127125-D1B2-437B-9B8E-CA85F16581D0}
+		{1938C8E1-EFBF-46B3-9BFD-7C2EA68E3154} = {F3127125-D1B2-437B-9B8E-CA85F16581D0}
 	EndGlobalSection
 EndGlobal
