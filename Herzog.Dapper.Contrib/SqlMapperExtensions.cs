@@ -168,7 +168,7 @@ namespace Herzog.Dapper.Contrib.Extensions
                 var name = GetTableName(type);
 
                 //sql = $"select * from {name} where {key.Name} = @id";
-                sql = string.Format($"select {0} from {1} where {2} = @id", queryColumnPropertyMapString, name, key.Name);
+                sql = string.Format("select {0} from {1} where {2} = @id", queryColumnPropertyMapString, name, key.Name);
                 GetQueries[type.TypeHandle] = sql;
             }
 

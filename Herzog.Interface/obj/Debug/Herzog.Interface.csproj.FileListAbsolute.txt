@@ -1,5 +1,4 @@
 E:\HerzogFramework\HerzogFramework\Herzog.Interface\bin\Debug\Herzog.Interface.dll
 E:\HerzogFramework\HerzogFramework\Herzog.Interface\bin\Debug\Herzog.Interface.pdb
-E:\HerzogFramework\HerzogFramework\Herzog.Interface\obj\Debug\Herzog.Interface.csprojResolveAssemblyReference.cache
 E:\HerzogFramework\HerzogFramework\Herzog.Interface\obj\Debug\Herzog.Interface.dll
 E:\HerzogFramework\HerzogFramework\Herzog.Interface\obj\Debug\Herzog.Interface.pdb

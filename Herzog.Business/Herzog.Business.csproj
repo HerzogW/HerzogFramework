@@ -40,7 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authorization\Permission.cs" />
+    <Compile Include="DbHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Herzog.DatabaseFactory\Herzog.Factory.csproj">
+      <Project>{1938c8e1-efbf-46b3-9bfd-7c2ea68e3154}</Project>
+      <Name>Herzog.Factory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Herzog.Interface\Herzog.Interface.csproj">
+      <Project>{dbcccdc4-4ea1-4cd3-9606-04f0c5132e76}</Project>
+      <Name>Herzog.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Herzog.Model\Herzog.Model.csproj">
+      <Project>{b8e1c4c3-588d-447f-a481-69aa7cfffe39}</Project>
+      <Name>Herzog.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
