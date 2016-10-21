@@ -4,29 +4,31 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Herzog.Web.Areas.Authorization.Controllers
+namespace Herzog.Web.Areas.Auth.Controllers
 {
-    public class PermissionController : Controller
+    public class RoleController : Controller
     {
-        // GET: Authorization/Permission
+        // GET: Auth/Role
         public ActionResult Index()
         {
+
+
             return View();
         }
 
-        // GET: Authorization/Permission/Details/5
+        // GET: Auth/Role/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Authorization/Permission/Create
+        // GET: Auth/Role/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Authorization/Permission/Create
+        // POST: Auth/Role/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -42,13 +44,13 @@ namespace Herzog.Web.Areas.Authorization.Controllers
             }
         }
 
-        // GET: Authorization/Permission/Edit/5
+        // GET: Auth/Role/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Authorization/Permission/Edit/5
+        // POST: Auth/Role/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -64,13 +66,13 @@ namespace Herzog.Web.Areas.Authorization.Controllers
             }
         }
 
-        // GET: Authorization/Permission/Delete/5
+        // GET: Auth/Role/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Authorization/Permission/Delete/5
+        // POST: Auth/Role/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

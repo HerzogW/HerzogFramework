@@ -2,3 +2,4 @@ E:\HerzogFramework\HerzogFramework\Herzog.Common\bin\Debug\Herzog.Common.dll
 E:\HerzogFramework\HerzogFramework\Herzog.Common\bin\Debug\Herzog.Common.pdb
 E:\HerzogFramework\HerzogFramework\Herzog.Common\obj\Debug\Herzog.Common.dll
 E:\HerzogFramework\HerzogFramework\Herzog.Common\obj\Debug\Herzog.Common.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.Common\obj\Debug\Herzog.Common.csprojResolveAssemblyReference.cache

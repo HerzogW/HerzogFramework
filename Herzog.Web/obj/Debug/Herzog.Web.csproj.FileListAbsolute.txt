@@ -151,3 +151,5 @@ E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\MySql.Data.dll
 E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\Oracle.ManagedDataAccess.dll
 E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\Herzog.MySqlDB.pdb
 E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\Herzog.OracleDB.pdb
+E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\Herzog.Common.dll
+E:\HerzogFramework\HerzogFramework\Herzog.Web\bin\Herzog.Common.pdb

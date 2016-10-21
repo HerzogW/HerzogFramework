@@ -1,22 +1,22 @@
 ﻿using System.Web.Mvc;
 
-namespace Herzog.Web.Areas.Authorization
+namespace Herzog.Web.Areas.Auth
 {
-    public class AuthorizationAreaRegistration : AreaRegistration 
+    public class AuthAreaRegistration : AreaRegistration 
     {
         public override string AreaName 
         {
             get 
             {
-                return "Authorization";
+                return "Auth";
             }
         }
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(
-                "Authorization_default",
-                "Authorization/{controller}/{action}/{id}",
+                "Auth_default",
+                "Auth/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }
             );
         }
